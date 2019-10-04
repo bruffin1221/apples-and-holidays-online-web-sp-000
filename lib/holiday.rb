@@ -73,7 +73,7 @@ def all_holidays_with_bbq(holiday_hash)
     h.map do | c, sup|
       sup.map do |item|
         if item=="BBQ"
-          bbq<<c
+          holiday<<c
         end
       end
       holiday_hash
