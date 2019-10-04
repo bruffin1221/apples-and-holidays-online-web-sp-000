@@ -75,4 +75,4 @@ def all_holidays_with_bbq(holiday_hash)
         c
         end
     end
-end.flatten(nil).compact.uniq
+end.flatten(nil).compact.shift.
