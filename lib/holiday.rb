@@ -75,7 +75,7 @@ def all_holidays_with_bbq(holiday_hash)
         if item=="BBQ"
           bbq<<c
         end
-      end
       bbq
     end
   end
+end
