@@ -94,11 +94,14 @@ holiday_supplies = {
     :memorial_day => ["BBQ"]
   }
 }
+
+bbq=[]
 holiday_supplies.each do |s, h|
   h.each do | c, sup|
     sup.each do |item|
       if item=="BBQ"
-         puts "#{c}"
+        bbq<<puts "#{c}"
       end
+
     end
   end
