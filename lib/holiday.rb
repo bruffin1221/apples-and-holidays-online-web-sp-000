@@ -68,40 +68,15 @@ def all_supplies_in_holidays(holiday_hash)
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-  holiday_supplies.each do do |s, h|
-    h. each do | c, sup|
+  bbq=[]
+  holiday_supplies.map do |s, h|
+    h.map do | c, sup|
       sup.map do |item|
         if item=="BBQ"
-          c
+          bbq<<c
         end
       end
     end
   end
-end
-
-holiday_supplies = {
-  :winter => {
-    :christmas => ["Lights", "Wreath"],
-    :new_years => ["Party Hats"]
-  },
-  :summer => {
-    :fourth_of_july => ["Fireworks", "BBQ"]
-  },
-  :fall => {
-    :thanksgiving => ["Turkey"]
-  },
-  :spring => {
-    :memorial_day => ["BBQ"]
-  }
-}
-
-bbq=[]
-holiday_supplies.each do |s, h|
-  h.each do | c, sup|
-    sup.each do |item|
-      if item=="BBQ"
-        bbq<<puts "#{c}"
-      end
-
-    end
-  end
+  
+  bbq
