@@ -75,4 +75,5 @@ def all_holidays_with_bbq(holiday_hash)
           c
           end
       end
-    end.shift.compact.flatten(nil)
+    end.shift.flatten.compact.shift
+  end.compact
