@@ -68,14 +68,11 @@ def all_supplies_in_holidays(holiday_hash)
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-  bbq=[]
   holiday_supplies.map do |s, h|
     h.map do | c, sup|
       sup.map do |item|
         if item=="BBQ"
-          bbq<<c
+        c
         end
-      bbq
     end
-  end
-end
+end.flatten(nil).compact.uniq
